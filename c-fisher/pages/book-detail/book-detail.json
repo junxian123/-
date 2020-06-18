@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "book-detail-cmp":"/components/book-detail/index",
+    
+    "card-cmp":"/miniprogram_npm/lin-ui/card/index",
+    "button-cmp":"/miniprogram_npm/lin-ui/button/index",
+    "tag-cmp": "/miniprogram_npm/lin-ui/tag/index",
+    "popup-cmp":"/miniprogram_npm/lin-ui/popup/index",
+    "loading-cmp": "/miniprogram_npm/lin-ui/loading/index"
+  }
+}

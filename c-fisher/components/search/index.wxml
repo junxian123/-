@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="history-container container">
+    <text class="title">历史搜索</text>
+    <view class="tag-container">
+      <block wx:for='{{searchHistory}}' wx:key="{{item.index}}">
+        <tag-cmp class="tag" shape="square" name='{{item}}' bg-color="#2F4F4F" 
+        bind:lintap='onTap'>{{item}}</tag-cmp>
+      </block>
+    </view>
+  </view>
+  <view class="hot-container container">
+    <!-- <text class="title">热门搜索</text>
+    <view class="tag-container">
+      <tag-cmp shape="square" class="tag" bg-color="#2F4F4F">JAVA入门与进阶</tag-cmp>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "button-cmp": "/miniprogram_npm/lin-ui/button/index",
+    "icon-cmp": "/miniprogram_npm/lin-ui/icon/index"
+  }
+}

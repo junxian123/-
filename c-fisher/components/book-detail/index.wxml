@@ -1,0 +1,9 @@
+<view class='container'>
+    <text wx:if='{{book.author}}'>作者：{{book.author}}</text>
+    <text wx:if='{{book.publisher}}'>出版社：{{book.publisher}}</text>
+    <text wx:if='{{book.pubdate}}'>出版年：{{book.pubdate}}</text>
+    <text wx:if='{{book.pages}}'>页数：{{book.pages}}</text>
+    <text wx:if='{{book.price}}'>定价：{{book.price}}</text>
+    <text wx:if='{{book.binding}}'>精装：{{book.binding}}</text>
+    <text wx:if='{{book.isbn}}'>ISBN：{{book.isbn}}</text>
+</view>

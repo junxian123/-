@@ -1,0 +1,8 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="tools" />
+<l-card full type="cover" image="{{data.image}}" title="{{data.title}}" 
+l-class="container" l-img-class="image" l-title-class="title" bindtap="onTap">
+  <view class='product-contianer'>
+    <text>{{data.author}}</text>
+    <view class='content'>{{data.summary?tools.slice(data.summary,0,30)+'...':'暂无内容简介'}}</view>
+  </view>
+</l-card>

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "search-btn-cmp":"/components/search-btn/index",
+    "search-cmp":"/components/search/index",
+    "book-cmp": "/components/book/index",
+    "search-bar-cmp": "/miniprogram_npm/lin-ui/search-bar/index",
+    "tag-cmp":"/miniprogram_npm/lin-ui/tag/index",
+    "loading-cmp":"/miniprogram_npm/lin-ui/loading/index",
+    "loadmore-cmp": "/miniprogram_npm/lin-ui/loadmore/index"
+  }
+}

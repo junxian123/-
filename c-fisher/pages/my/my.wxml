@@ -1,0 +1,26 @@
+<view class='my-container'>
+  <view class='user-container'>
+    <avatar-cmp text='鱼书' grade='{{beans}}' bind:getUserInfo='getUserInfo' open-data='{{openData}}' receive-count='{{receiveCount}}' send-count='{{sendCount}}'/>
+    <view class='about-container'>
+      <view class='about' bind:tap='onAbout'>
+        <icon-cmp name='about' size='28' color='#fff' class='icon'/>
+        <text>关于我的</text>
+      </view>
+      <view class='thank' bind:tap='onThank'>
+        <icon-cmp name='thank' size='28' color='#fff' class='icon'/>
+        <text>鸣谢</text>
+      </view>
+    </view>
+  </view>
+  <view class='mail-container'>
+    <list-cmp title='地址管理' icon='address' gap='14' l-class-icon='list-icon' url='/pages/mail/mail'/>
+    <view class='mail' wx:if='{{mail}}'>
+      <list-cmp title='{{mail.nickname}}' is-link='{{false}}' gap='14'/>
+      <list-cmp title='{{mail.mobile}}' is-link='{{false}}' gap='14'/>
+      <list-cmp title='{{mail.province+mail.city+mail.address}}' is-link='{{false}}' gap='14'/>
+    </view>
+  </view>
+  <view class='split'></view>
+  <list-cmp title='鱼漂' icon='fish' gap='14' l-class-icon='list-icon' url='/pages/drift/drift'/>
+  <list-cmp title='统计赠送图书数据' icon='table'  gap='14' l-class-icon='fisher list-icon' url='/pages/line/index'/>
+</view> 

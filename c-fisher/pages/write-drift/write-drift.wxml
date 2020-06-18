@@ -1,0 +1,32 @@
+
+<message-cmp/>
+<view class='write-drift-container' wx:if='{{beans>=1}}'>
+  <tag-cmp bg-color='#2F4F4F' l-class='tag' icon-name='warning' 
+  icon-color='#fff' icon-size='28'>本次交易将消耗你1个鱼豆，你当前还有{{beans}}个鱼豆</tag-cmp>
+  <card-cmp l-class='card-container' 
+  l-img-class='card-image' type='primary' image="{{book.image}}" title="{{book.title}}">
+    <text class='author'>作者：{{book.author}}</text>
+    <view class='gifter-contianer'>
+      <tag-cmp bg-color='#2F4F4F' icon-name='down' icon-color='#fff' location='right'>书籍拥有者信息</tag-cmp>
+      <text>昵称: {{occupant.nickname}}</text>
+      <text>鱼豆：{{occupant.beans}}</text>
+      <text>接受/送出书籍：{{occupant.receive_or_send}}</text>
+    </view>
+  </card-cmp>
+
+  <view class='mail-contianer'>
+    <tag-cmp bg-color='#2F4F4F' class='tag-title'>邮寄信息</tag-cmp>
+    <list-cmp wx:if='{{mail}}' l-class='list' icon='address' l-class-icon='address-icon' title='{{mail.nickname}} {{mail.mobile}}' desc='{{mail.province+mail.city+mail.address}}' url='/pages/mail/mail'></list-cmp>
+    <list-cmp wx:else l-class='list' icon='warning' l-class-icon='warning'  l-class-content='warning'
+    title='客官，邮寄信息是发送鱼漂不可缺一的一部分，你的邮寄信息还未完善，请前往完善信息！' url='/pages/mail/mail'></list-cmp>
+  </view>
+  <view class='message-container'>
+    <tag-cmp bg-color='#2F4F4F' class='tag-title'>对他/她说的话</tag-cmp>
+    <textarea-cmp name='message' placeholder='如有特别要求,可向他/她留言' bind:linblur='onMessage' maxlength='20'/>
+    <button-cmp l-class='btn' size='large' icon='fish' 
+    icon-color='#fff' bind:lintap='onDrift' disabled='{{isDisabled}}'>发送鱼漂</button-cmp>
+  </view>
+</view>
+
+<status-show-cmp l-describe-class='describe' show='{{status}}' type='error'
+describe='客官，你的鱼豆不足,不能向他人请求图书，也不能接受别人赠送书籍' button-text='去逛逛？' l-button-class='btn' bind:lintap='toPrevious'/>

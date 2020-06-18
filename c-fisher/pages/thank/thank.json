@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "tag-cmp": "/miniprogram_npm/lin-ui/tag/index"
+  }
+}

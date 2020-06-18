@@ -1,0 +1,47 @@
+.user-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  background-color: #2F4F4F;
+}
+
+.scope {
+  color: #fff
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 13px;
+}
+
+
+.about,
+.thank{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 10rpx;
+  font-size: 24rpx;
+}
+
+.about{
+  border-bottom: 1px dashed #fff
+}
+.thank{
+  padding-top: 8rpx;
+}
+
+.about .icon,
+.thank .icon {
+  padding-right: 10rpx;
+} 
+
+.list-icon {
+  color: #2F4F4F !important
+}
+
+

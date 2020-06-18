@@ -1,0 +1,20 @@
+
+<view class='gift-conatiner' wx:if='{{gifts.total}}'>
+  <tag-cmp bg-color='#2F4F4F' l-class='tag'>我想赠送的书籍 共<text>{{gifts.total}}本</text></tag-cmp>
+  <block wx:for='{{gifts.trades}}' wx:key='{{item.book.id}}'>
+    <card-cmp l-class='card-container' l-img-class='card-image' 
+    image='{{item.book.image}}' title='{{item.book.title}}' bind:lintap='onDetail' data-id='{{item.book.id}}'>
+        <book-detail-cmp book='{{item.book}}' catch:tap='onDetail' data-id='{{item.book.id}}'/>
+        <view class='btn-container'>
+          <button-cmp l-class='btn' size='mini' height='50' 
+          bind:lintap='onCancel' data-id='{{item.book.id}}'>撤销</button-cmp>
+          <tag-cmp wx:if='{{item.count}}' size='mini' height='49' 
+          plain='{{true}}' font-color='#2F4F4F' icon-name='account' icon-color='#2F4F4F' 
+          icon-size='24' >{{item.count}}人想要</tag-cmp>
+        </view>
+    </card-cmp>
+  </block>
+</view>
+<!-- <loading-cmp show='{{loading}}' type='flip' size='large' color='#2F4F4F' fullScreen='{{true}}'/> -->
+<status-show-cmp show='{{gifts.total==0}}' type='data' 
+describe='喵，你的赠送清单空空如也，去逛逛吧~' button-text='去逛逛' l-button-class='btn' bind:lintap='toIndexPage'/>

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/book-detail/book-detail",
+    "pages/gift/gift",
+    "pages/login-exp/login-exp",
+    "pages/wish/wish",
+    "pages/mail/mail",
+    "pages/drift/drift",
+    "pages/write-drift/write-drift",
+    "pages/about/about",
+    "pages/thank/thank",
+	"pages/line/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2F4F4F",
+    "navigationBarTitleText": "鱼书",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#36ab60",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index@selected.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/gift/gift",
+        "iconPath": "images/icon/flower.png",
+        "selectedIconPath": "images/icon/flower@selected.png",
+        "text": "赠送清单"
+      },
+      {
+        "pagePath": "pages/wish/wish",
+        "iconPath": "images/icon/wish.png",
+        "selectedIconPath": "images/icon/wish@selected.png",
+        "text": "心愿清单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/icon/my.png",
+        "selectedIconPath": "images/icon/my@selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

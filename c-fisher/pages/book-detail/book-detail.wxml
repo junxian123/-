@@ -1,0 +1,64 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="tools" />
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class='detail-container'>
+  <card-cmp l-class='card-container' l-img-class='card-image' type="primary" image="{{book.image}}" title="{{book.title}}">
+    <view class="book-detail">
+      <book-detail-cmp book='{{book}}'/>
+      <text class='total' 
+      wx:if='{{gifted.total || wished.total}}'>{{wished.total}}人想要 / {{gifted.total}}人可赠送</text>
+    </view>
+    <view class='btn-container'>
+      <button-cmp l-class='btn' size='mini' height='50' bind:lintap='onShowPopup' 
+      disabled='{{isGifter}}' wx:if='{{!isWisher}}'>{{isGifter?saveOfGiftText:giftText}}</button-cmp>
+      <button-cmp l-class='btn' size='mini' height='50' bind:lintap='onWish' 
+      disabled='{{isWisher}}'wx:if='{{!isGifter}}'>{{isWisher?saveOfWishText:wishText}}</button-cmp>
+    </view>
+  </card-cmp>
+
+  <view class='b-s-container'>
+    <tag-cmp bg-color='#2F4F4F'>内容简介</tag-cmp>
+    <text class='summary' decode="{{true}}">{{book.summary?filter.format(book.summary) :'无'}}</text>
+  </view>
+
+  <!-- 1 赠送者（显示索要） 2 索要者（显示赠送） 3 既不是赠送者也不是索要者（显示赠送）-->
+  <scroll-view class='trade-container' scroll-y='{{true}}' 
+  wx:if='{{isWisher && gifted.total!=0 || isGifter && wished.total!=0 || !isWisher && !isGifter && gifted.total!=0}}'>
+    <tag-cmp bg-color='#2F4F4F'>{{isGifter?tradeGiftsTitle:tradeWishesTitle}}</tag-cmp>
+    <block wx:for='{{isGifter?wished.trades:gifted.trades}}' wx:key='{{item.id}}'>
+      <view class='trade-info-container'>
+        <text class='nickname'>{{item.nickname.length>5 ? (tools.slice(item.nickname,0,5)+'..') : item.nickname}}
+        </text>
+        <text clas='creat-time'>上传于：{{filter.dateFormat(item.create_time)}}</text>
+        <button-cmp wx:if='{{isGifter}}' l-class='btn' size='mini' height='40' width='200'
+        bind:lintap='onShowDriftPopup' disabled='{{item.is_gifted_or_requested}}' 
+        data-id='{{item.id}}'>{{item.is_gifted_or_requested?responsedText:responseText}}</button-cmp>
+        <button-cmp wx:else l-class='btn' size='mini' height='40' width='200'
+        bind:lintap='onRequest' disabled='{{item.is_gifted_or_requested}}'
+        data-id='{{item.id}}'>{{item.is_gifted_or_requested?requestedText:requestText}}</button-cmp>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<loading-cmp show='{{loading}}' type='flip' size='large' color='#2F4F4F' fullScreen='{{true}}'/>
+
+<popup-cmp show='{{isShowPopup}}' animation='show' content-align='center' popup-class='popup-container'>
+  <view class='popup-content'>
+    <text>你确定想拥有{{'<<'+book.title+'>>'}}这本书吗</text>
+    <text class='tip'>如果您不想赠送此书，或者没有这本书，请不要随意发布虚假信息。谢谢你的支持和理解。</text>
+    <view class='btn-container'>
+      <button-cmp l-class='btn' size='mini' height='50' bind:lintap='onGift'>确定赠送</button-cmp>
+      <button-cmp l-class='btn' size='mini' height='50' bind:lintap='onExitPopup'>不了算了</button-cmp>
+    </view>
+  </view>
+</popup-cmp>
+
+<popup-cmp show='{{isShowDriftPopup}}' animation='show' content-align='center' popup-class='popup-container'>
+  <view class='popup-content'>
+    <text>你确定想赠送{{'<<'+book.title+'>>'}}这本书吗</text>
+    <view class='btn-container'>
+      <button-cmp l-class='btn' size='mini' height='50' bind:lintap='sendDrift'>发送鱼漂</button-cmp>
+      <button-cmp l-class='btn' size='mini' height='50' bind:lintap='onExitPopup'>不了算了</button-cmp>
+    </view>
+  </view>
+</popup-cmp>

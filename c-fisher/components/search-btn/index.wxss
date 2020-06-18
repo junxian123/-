@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #2F4F4F;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  width: 650rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+
+.icon {
+  margin-right: 10rpx;
+}
+.text {
+  font-size: 14px;
+  color: #A9A9A9;
+}

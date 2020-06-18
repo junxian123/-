@@ -1,0 +1,68 @@
+
+.write-drift-container {
+  display: flex;
+  flex-direction: column
+}
+
+
+.tag {
+  width:100%;
+  font-size: 13px !important;
+  border-radius: 0 !important;
+}
+
+.card-container {
+  width: 100% !important;
+}
+
+.card-image {
+  height: 300rpx !important;
+}
+
+.author {
+  font-size: 13px
+}
+
+.gifter-contianer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  font-size: 13px;
+}
+
+.mail-contianer,
+.message-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  padding:16rpx 30rpx;
+}
+
+.address-icon {
+  color: #385E0F !important;
+}
+
+.tag-title {
+  margin-bottom: 14rpx;
+}
+
+.list {
+  border: 0 !important;
+}
+
+.btn {
+  margin-top: 20rpx;
+  background-color: #2F4F4F !important;
+}
+
+.warning {
+  color: #ff0000 !important;
+}
+
+.describe {
+  padding: 0 20rpx;
+}
+
+.tip-container {
+  height: 72rpx;
+}

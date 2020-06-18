@@ -1,0 +1,8 @@
+<view class='thank-container'>
+  <tag-cmp bg-color='#2F4F4F'>致谢 To Lin-UI</tag-cmp>
+  <text class='doc'><text class='strong'>Lin-UI</text> 文档http://doc.mini.7yue.pro/</text>
+  <text class='desc'><text class='strong'>Lin-UI</text> 是一个由<text class='strong'>Lin-UI</text>团队开发的微信小程序组件库，组件普及甚广，基本都可以满足开发者的需求。</text>
+  <text class='desc'>鱼书小程序，也是用<text class='strong'>Lin-UI</text>组件库开发的，在一定程度上，减少了我开发时间。</text>
+</view>
+
+

@@ -1,0 +1,87 @@
+.card-container {
+  width: 100% !important;
+}
+
+.card-image {
+  height: 300rpx !important;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10rpx;
+}
+
+.btn {
+  margin-right: 12rpx;
+  background-color: #2F4F4F !important;
+}
+
+.b-s-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  padding: 30rpx 30rpx 180rpx;
+}
+
+.summary {
+  padding-top: 16rpx;
+  text-indent: 32rpx;
+  line-height: 1.4;
+  font-size: 12px;
+}
+
+.popup-container {
+  background:rgba(0,0,0,.5);
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 750rpx;
+  padding: 20rpx;
+  background-color:#fff;
+}
+
+.popup-content text:first-child {
+  color:#228B22;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.popup-content .tip {
+  padding: 10rpx;
+  margin-top: 20rpx;
+  color: #8e8E8E;
+}
+
+.total {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.trade-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  padding: 30rpx;
+  background-color: #fff;
+  border-top: 1px solid #f2f2f2
+}
+
+.trade-info-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 16rpx 0;
+  font-size: 12px;
+}
+
+.nickname {
+  width: 160rpx;
+}

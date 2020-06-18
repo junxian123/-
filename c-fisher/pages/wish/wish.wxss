@@ -1,0 +1,36 @@
+.wishes-container {
+  display: flex;
+  flex-direction: column
+}
+
+.card-container {
+  width: 100% !important;
+  margin-bottom: 30rpx !important;
+}
+
+.card-image {
+  height: 300rpx !important;
+}
+
+.tag {
+  display: block !important;
+  width:100% !important;
+  font-size: 13px !important;
+  border-radius: 0 !important;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6rpx;
+}
+
+.btn {
+  margin-right: 10rpx;
+  background-color: #2F4F4F !important;
+}
+
+.total {
+  font-weight: 700
+}

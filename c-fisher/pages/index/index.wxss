@@ -1,0 +1,25 @@
+
+.index-container,
+.index-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.index-content {
+  padding:20rpx;
+}
+
+.search-bar {
+  background-color: #2F4F4F !important;
+}
+
+.l-cancel-class {
+  color: #fff !important;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500rpx;
+}

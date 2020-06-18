@@ -1,0 +1,12 @@
+<view class='about-container'>
+  <view class='info-container'>
+    <view class='info info-first'>
+      <text>关注微信公众号</text>
+      <text>每天快乐一点点</text>
+    </view>
+    <view class='info info-second'>
+      <text>欢迎用户通过微信公众号向作者反馈bug。</text>
+      <text>由于本项目是个人小程序作为案例演示，不承诺保留用户数据。</text>
+    </view>
+  </view>
+</view>

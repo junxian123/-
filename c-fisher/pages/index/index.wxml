@@ -1,0 +1,28 @@
+<view class='index-container' wx:if='{{!isShowSearchUI}}'>
+  <search-btn-cmp bind:search='onSearch'/>
+  <view class='index-content'>
+    <tag-cmp bg-color='#2F4F4F'>最近上传</tag-cmp>
+    <block wx:for='{{recentlyUploaded}}' wx:key='{{item.id}}'>
+      <book-cmp book='{{item}}' index='{{index}}' />
+    </block>
+  </view>
+</view>
+
+<view class='search-container' wx:if="{{isShowSearchUI}}">
+  <search-bar-cmp l-class='search-bar' l-cancel-class='l-cancel-class' placeholder="{{placeholder}}" 
+  clear='{{true}}' bg-color="#f2f2f2" show-cancel="{{true}}" shape="circle" bind:cancel='onCancel' bind:linconfirm='onConfirm' bind:linclear='onClear' value='{{q}}'/>
+  <search-cmp searchHistory='{{searchHistory}}' wx:if='{{!isShowSearchResult}}' bind:tag='onTag'/>
+  <view class='search-content' wx:if='{{isShowSearchResult}}'>
+    <block wx:for='{{searchResult}}' wx:key='{{item.id}}'>
+      <book-cmp book='{{item}}' index='{{index}}' />
+    </block>
+  </view>
+  <loading-cmp wx:if='{{isShowLoading}}' show='{{true}}' type='flip' size='large' color='#2F4F4F' class='loading'/>
+</view>
+
+
+<loadmore-cmp show="{{isShowLoadingMore}}" type="loading" 
+loading-text="努力加载中..." line='{{true}}'/>
+<loadmore-cmp show="{{isShowEndingMore}}" type="end" end-text='已经到底了~'  line='{{true}}'/>
+
+

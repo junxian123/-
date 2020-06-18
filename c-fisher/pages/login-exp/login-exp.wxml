@@ -1,0 +1,4 @@
+<status-show-cmp show='{{!loading}}' type='error'
+describe='喵，你的登录已过期/未登录，请前往登录！' button-text='去登录' l-button-class='btn' bind:lintap='toPrevious'/>
+
+<loading-cmp show='{{loading}}' type='flip' size='large' color='#2F4F4F' fullScreen='{{true}}'></loading-cmp>

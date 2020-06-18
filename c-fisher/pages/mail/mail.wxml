@@ -1,0 +1,12 @@
+<view class='mail-container'> 
+  <form bindsubmit='onSubmit'>
+    <input-cmp name='nickname' tipType='text' rules='{{nicknameRules}}'  placeholder='姓名' value='{{mail.nickname}}' label-width='0' clear='{{true}}' />
+    <input-cmp name='mobile' tipType='text' rules='{{phoneRules}}' placeholder='手机号码' value='{{mail.mobile}}' label-width='0' clear='{{true}}' bind:linvalidate='validateMobile'/>
+    <input-cmp name='province' tipType='text' rules='{{provinceRules}}' placeholder='省份' value='{{mail.province}}' label-width='0' clear='{{true}}'/>
+    <input-cmp name='city' tipType='text' rules='{{cityRules}}' placeholder='城市' value='{{mail.city}}' label-width='0' clear='{{true}}'/>
+    <input-cmp name='address' tipType='text' rules='{{addressRules}}' placeholder='详细地址' value='{{mail.address}}' label-width='0' clear='{{true}}'/>
+    <view class='btn-container'>
+      <button class='btn' form-type='submit'>保存</button>
+    </view>
+  </form>
+</view>

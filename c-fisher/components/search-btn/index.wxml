@@ -1,0 +1,6 @@
+<view class="container">
+    <view class="search" bind:tap="onTap">
+      <icon-cmp class="icon" name="research" color="#A9A9A9" size="30"/>
+      <text class="text">搜索书籍</text>
+    </view>
+  </view>

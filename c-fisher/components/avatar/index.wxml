@@ -1,0 +1,20 @@
+
+<view class='container'>
+  <view class='avatar-container'>
+    <open-data type="userAvatarUrl" wx:if='{{openData}}'/>
+    <button-cmp wx:else size='' l-class='avatar' width='100' 
+  height='100' icon='avatar' icon-color='#fff' icon-size='60' open-type='getUserInfo' bind:getuserinfo='getUserInfo'/>
+  </view>
+  <view class='user-container'>
+    <open-data type='userNickName' class='nickname' wx:if='{{openData}}'/>
+    <text class='nickname' wx:else>鱼书</text>
+    <view class='grade-container'>
+      <icon-cmp name='jifen' color='#FFD900' size='28'/>
+      <text class='grade'>{{grade}}</text>
+    </view>
+	<view class="count">
+		<text>赠送/收到：</text>
+		<text>{{sendCount}}/{{receiveCount}}</text>
+	</view>
+  </view>
+</view>

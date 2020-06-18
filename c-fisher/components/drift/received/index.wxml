@@ -1,0 +1,33 @@
+<wxs src="../../../utils/filter.wxs" module="filter" />
+<view class='container'>
+  <card-cmp l-class='card-container' l-img-class='card-image' 
+type="primary" image="{{drift.book_img}}" title="{{drift.book_title}}">
+    <view class='drift-info'>
+      <view class='info'>
+        <text>作者：{{drift.book_author}}</text>
+        <text>发起日期：{{filter.dateFormat(drift.create_time)}}</text>
+        <text>赠送者：{{drift.gifter_nickname}}</text>
+        <view class='pending-container'>
+          <icon-cmp class='pending-icon' name='pending' size='32' color='#2F4F4F'/>
+          <text>{{drift.pending}}</text>
+        </view>
+      </view>
+      <view class='mail-info' wx:if='{{drift.address}}'>
+        <tag-cmp font-color='#2F4F4F' plain='{{true}}'>邮寄信息</tag-cmp>
+        <list-cmp  l-class='list' l-class-content='list-content' 
+        title='{{drift.recipient_name}} {{drift.mobile}}' desc='{{drift.address}}' is-link='{{false}}'/>
+      </view>
+      <list-cmp wx:else l-class='list' l-class-content='warning-content' 
+      icon='warning' l-class-icon='warning-icon' url="{{'/pages/write-drift/write-drift?bookId='+drift.book_id+'&giftId='+drift.gift_id+'&driftId='+drift.id}}" 
+      title='客官，邮寄信息是发送鱼漂不可缺一的一部分，你的邮寄信息还未完善，请前往完善信息！'>
+      </list-cmp>
+      <button-cmp wx:if='{{drift.pending_status==1}}' 
+      l-class='btn' size='mini' height='50' data-id='{{drift.id}}' 
+      bind:lintap='onCancel'>撤消</button-cmp>
+      <button-cmp wx:if='{{drift.pending_status==3||drift.pending_status==2}}' 
+      l-class='btn' size='mini' height='50' data-id='{{drift.id}}' 
+      bind:lintap='onDelete'>删除</button-cmp>
+    </view>
+  </card-cmp>
+  <tag-cmp bg-color='#fff' l-class='tag'>您自己的留言：{{drift.message||''}}</tag-cmp>
+</view>

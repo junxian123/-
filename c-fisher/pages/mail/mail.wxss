@@ -1,0 +1,18 @@
+
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 710rpx;
+  height: 88rpx;
+  background-color: #2f4f4f;
+  color: #fff;
+  font-size: 14px;
+}

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column
+}
+
+.search-container {
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+  box-shadow:0 0 3px 0 #e3e3e3; 
+}
+
+.title {
+  margin-left: 24rpx;
+  padding-left: 10rpx;
+  border-left: 4px solid #000;
+  font-size: 12px;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:14rpx 38rpx;
+}
+
+.tag {
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+}
+
+.hot-container,.history-container{
+  margin-top: 40rpx;
+}

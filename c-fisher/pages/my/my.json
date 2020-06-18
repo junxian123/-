@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "avatar-cmp":"/components/avatar/index",
+    "icon-cmp": "/miniprogram_npm/lin-ui/icon/index",
+    "list-cmp": "/miniprogram_npm/lin-ui/list/index",
+	"l-tag":"/miniprogram_npm/lin-ui/tag/index"
+  }
+}

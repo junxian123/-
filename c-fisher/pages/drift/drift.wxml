@@ -1,0 +1,21 @@
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class='drift-container'>
+  <segment-cmp l-class-line='active-line' active-key='received'  bind:linchange='onChange'
+  aminmated="{{true}}" aminmated-for-line='{{true}}'>
+    <segment-item-cmp tab='收到鱼漂' key='received'/>
+    <segment-item-cmp tab='赠送鱼漂' key='sent'/>
+  </segment-cmp>
+  <view class='drift-list-container' wx:if='{{isShowRecived}}'>
+    <block wx:for='{{rDrift}}' wx:key='{{item.id}}'>
+      <received-drift-cmp class='drift-item' drift='{{item}}'
+       bind:cancel='onCancel' bind:delete='onDelete'/>
+    </block>
+  </view>
+
+  <view class='drift-list-container' wx:else>
+    <block wx:for='{{sDrift}}' wx:key='{{item.id}}'>
+      <sent-drift-cmp class='drift-item' drift='{{item}}'
+       bind:mail='onMail' bind:reject='onReject'/>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+}
+
+.avatar-container {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  margin-left: 16rpx;
+  font-size: 13px;
+}
+
+
+.grade-container {
+  display: flex;
+  align-items: center;
+  margin-top: 4rpx;
+}
+
+.grade {
+  padding-left: 4rpx;
+  color: #fff
+} 
+
+.count text:first-child {
+	color: #f8f8f8
+}

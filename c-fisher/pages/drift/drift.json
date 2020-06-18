@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "received-drift-cmp": "/components/drift/received/index",
+    "sent-drift-cmp": "/components/drift/sent/index",
+    "segment-cmp": "/miniprogram_npm/lin-ui/segment/index",
+    "segment-item-cmp": "/miniprogram_npm/lin-ui/segment-item/index"
+  }
+}

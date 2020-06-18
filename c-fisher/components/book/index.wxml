@@ -1,0 +1,7 @@
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="tools" />
+<card-cmp l-img-class='image' class='container' image='{{book.image}}' title='{{book.title}}' data-id='{{book.id}}' bind:tap='onTap' position="{{index%2 ? 'right':'left'}}">
+  <view class="description">
+    <view class='d-author'>{{book.author}}</view>
+    <view class='d-summary'>{{book.summary?tools.slice(book.summary,0,100)+'...':'暂无内容简介'}}</view>
+  </view>
+</card-cmp>

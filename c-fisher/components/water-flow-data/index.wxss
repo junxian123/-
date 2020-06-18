@@ -1,0 +1,34 @@
+.container {
+  width: 350rpx !important;
+  padding: 0 0 20rpx 0 !important;
+  margin-top: 20rpx !important;
+  background-color: #fff !important;
+  box-shadow: 0px 8rpx 20rpx 0px rgba(9, 36, 66, 0.04) !important;
+  border-radius: 16rpx !important;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+
+.image {
+  width: 350rpx !important;
+  height: 380rpx !important;
+}
+
+.product-contianer {
+  padding: 0 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-left: 10rpx !important;
+}
+
+
+.content {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+}

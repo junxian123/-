@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "status-show-cmp": "/miniprogram_npm/lin-ui/status-show/index",
+    "loading-cmp": "/miniprogram_npm/lin-ui/loading/index"
+  }
+}

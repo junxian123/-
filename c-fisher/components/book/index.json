@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card-cmp": "/miniprogram_npm/lin-ui/card/index"
+  }
+}
